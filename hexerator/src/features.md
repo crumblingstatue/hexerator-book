@@ -36,17 +36,13 @@ Custom color palettes can be saved and loaded, and generated through various mea
 Hexerator considers it important to easily align data with shortcut keys. Proper alignment can make a lot of difference
 with pattern recognition.
 
-You can see a YouTube video of it in action here:
-
-[![Video](https://img.youtube.com/vi/GhPh_y1PjTU/0.jpg)](https://www.youtube.com/watch?v=GhPh_y1PjTU)
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/GhPh_y1PjTU" title="Viewing Cave Story credits slide show with hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Process Memory editing
 Built-in support for opening memory of a process and viewing/editing it.
 Can be used to cheat in games, or discover how different applications store data in memory.
 
-You can see a YouTube video of it in action here:
-
-[![Video](https://img.youtube.com/vi/OPHMIEW_vh4/0.jpg)](https://www.youtube.com/watch?v=OPHMIEW_vh4)
+<iframe width="1280" height="699" src="https://www.youtube.com/embed/OPHMIEW_vh4" title="Hexerator: Process memory editing demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 You need to run hexerator with root/admin privileges to open memory of other processes.
 
@@ -78,9 +74,7 @@ You can write Lua scripts to:
 
 Support for executing a custom external command on selected data.
 
-You can see a YouTube video of it in action here:
-
-[![Video](https://img.youtube.com/vi/xnw4cdD9r-w/0.jpg)](https://www.youtube.com/watch?v=xnw4cdD9r-w)
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/xnw4cdD9r-w" title="Playing sounds in binary files with Hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Diffing
 

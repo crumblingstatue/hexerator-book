@@ -17,10 +17,10 @@ ARGS:
 OPTIONS:
     -h, --help                     Print help information
         --hard-seek <HARD_SEEK>    Seek to offset, consider it beginning of the file in the editor
-        --instance                 Open content in existing instance
     -j <JUMP>                      Jump to offset on startup
-        --load-recent              Load most recently used file
+        --meta <META>              Load this metafile
         --read-only                Open file as read-only, without writing privileges
+        --recent                   Open most recently used file
         --stream                   Specify source as a streaming source (for example, standard
                                    streams). Sets read-only attribute
         --take <TAKE>              Read only this many bytes

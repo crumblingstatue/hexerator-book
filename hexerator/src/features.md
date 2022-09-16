@@ -1,5 +1,5 @@
 Legend:
-- [ ] = Unimplemented
+- [ ] = Planned
 - [x] = Implemented
 
 # Features

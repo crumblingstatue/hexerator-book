@@ -11,6 +11,10 @@ You can help by [contributing](./contributing.md)!
 
 The current version is `0.1.0`.
 
+## Requirements
+
+Check out the [requirements](./getting-started/requirements.md) before getting Hexerator.
+
 ## Prebuilt versions
 
 ### Windows

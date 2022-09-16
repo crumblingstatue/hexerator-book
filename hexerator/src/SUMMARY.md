@@ -5,6 +5,7 @@
 
 # Getting started
 - [Get Hexerator](./get.md)
+    - [Requirements](./getting-started/requirements.md)
     - [Building from source](./getting-started/build-from-source.md)
 - [Ui Overview](./getting-started/ui-overview.md)
 - [Meta overview](./getting-started/meta-overview.md)

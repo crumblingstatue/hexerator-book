@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Hexerator</title>
-        <base href="/">
+        <title>Design - Hexerator</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-hexerator.html">What is hexerator?</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-hexerator.html">What is hexerator?</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html" class="active"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,19 +134,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="hexerator-design-document"><a class="header" href="#hexerator-design-document">Hexerator design document</a></h1>
+<h2 id="goals"><a class="header" href="#goals">Goals</a></h2>
+<p>Hexerator is a hex editor aiming to aid in pattern recognition and binary file discovery.
+It also aims to be a good and versatile hex editor usable in a large amount of scenarios,
+including editing <code>/proc/id/mem</code> and reading streaming sources, making it usable to read
+piped data.</p>
+<h2 id="user-interface"><a class="header" href="#user-interface">User interface</a></h2>
+<h3 id="perspective"><a class="header" href="#perspective">Perspective</a></h3>
+<p>A <code>Perspective</code> is a view into a <code>Region</code> with a specific <code>column count</code>.</p>
+<p>A variable column count is very helpful for better recognizing certain patterns in data, and is one of the core features of hexerator. A <code>Perspective</code> on its own doesn't really do much. To make use of perspectives, there are <code>View</code>s.</p>
+<h3 id="view"><a class="header" href="#view">View</a></h3>
+<p>A <code>View</code> is a region on the <code>Viewport</code> that provides a look into the data presented by a perspective. A view can be one of multiple kinds, like hex, ascii, block (pixel, kind of like a minimap), and it's scrollable, allowing you to explore different parts of a perspective. You can have multiple views on the <code>Viewport</code>. There is a <code>focused</code> view that you are currently focused on and scrolling/editing, etc.
+By default, all views that share the same perspective sync their scroll offsets with the <code>focused</code> view. This behavior can be turned off if independent scrolling is desired.</p>
+<h3 id="viewport"><a class="header" href="#viewport">Viewport</a></h3>
+<p>The <code>Viewport</code> is the area in the window where the <code>Views</code> are laid out.
+The other things that take up space in the window are the UI panels and windows.</p>
+<h2 id="concepts"><a class="header" href="#concepts">Concepts</a></h2>
+<h3 id="bindata"><a class="header" href="#bindata">BinData</a></h3>
+<p>The <code>BinData</code> is the raw binary data opened inside hex editor.
+It can be opened from a file, or streamed from a streaming source, like a pipe.</p>
+<h3 id="region"><a class="header" href="#region">Region</a></h3>
+<p>A <code>Region</code> is a slice of the <code>BinData</code>.
+It has a <code>start</code> offset which determines where it begins,
+and an <code>end</code> offset which determines where it ends.</p>
+<p>A <code>Region</code> can be given a <code>name</code> to give it an easy to remember
+identifier and also help remember what it's about.</p>
+<p>It can also have a <code>description</code> which can give further useful information about it.</p>
+<h3 id="meta"><a class="header" href="#meta">Meta</a></h3>
+<p>A <code>Meta</code> is all the metadata about a binary format. It can include things like <code>Region</code>s and <code>View</code>s that aid understanding
+of a binary format.</p>
+<h2 id="limits"><a class="header" href="#limits">Limits</a></h2>
+<p>To make development easier, and help keep my sanity, hexerator defines some value limits.</p>
+<h3 id="file-size"><a class="header" href="#file-size">File size</a></h3>
+<p>The supported file size is <code>min(usize, i64)</code>, which is ~4GB on 32 bit platforms,
+and practically limitless on 64 bit platforms. 16 bit platforms are not supported.</p>
+<h3 id="resolution-and-mouse-position"><a class="header" href="#resolution-and-mouse-position">Resolution and mouse position</a></h3>
+<p>These are i16, meaning values higher than 32767 are not supported.
+The minimum supported resolution is 920x620. The ui is not designed and tested for
+resolutions lower than that.</p>
+<h3 id="block-size"><a class="header" href="#block-size">Block size</a></h3>
+<p>A block, or cell (final name not decided) is the element that displays a value.
+Like a hex pair, an ascii character, etc.
+The size range is <code>1..i16::MAX</code>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="commandline.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="commandline.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
             </nav>
 
         </div>

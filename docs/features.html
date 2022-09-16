@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Hexerator</title>
-        <meta name="robots" content="noindex" />
+        <title>Features - Hexerator</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-hexerator.html">What is hexerator?</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-hexerator.html">What is hexerator?</a></li><li class="chapter-item expanded affix "><a href="features.html" class="active">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,9 +134,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="what-is-hexerator"><a class="header" href="#what-is-hexerator">What is Hexerator?</a></h1>
-<p>Hexerator is a <a href="https://en.wikipedia.org/wiki/Hex_editor">hex editor</a> with a <a href="./features.html">unique feature set</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><p>Legend:</p>
+                        <p>Legend:</p>
 <ul>
 <li><input disabled="" type="checkbox"/>
 = Unimplemented</li>
@@ -147,37 +144,37 @@
 <h1 id="features"><a class="header" href="#features">Features</a></h1>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#colorized-values">Colorized values</a>
+<a href="#colorized-values">Colorized values</a>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#custom-color-palettes">Custom color palettes</a></li>
+<a href="#custom-color-palettes">Custom color palettes</a></li>
 </ul>
 </li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#easy-data-alignment">Easy data alignment</a></li>
+<a href="#easy-data-alignment">Easy data alignment</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#process-memory-editing">Built-in process memory editing</a></li>
+<a href="#process-memory-editing">Built-in process memory editing</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#multiple-source-types">Multiple source types</a> (file/streamed sources)</li>
+<a href="#multiple-source-types">Multiple source types</a> (file/streamed sources)</li>
 <li><input disabled="" type="checkbox" checked=""/>
 <a href="commandline.html">Rich command line options</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#bookmarks">Bookmarks</a></li>
+<a href="#bookmarks">Bookmarks</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#multiple-configurable-views">Multiple configurable views</a></li>
+<a href="#multiple-configurable-views">Multiple configurable views</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#lua-scripting-support">Lua scripting support</a> for various operations, like fill.</li>
+<a href="#lua-scripting-support">Lua scripting support</a> for various operations, like fill.</li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#external-command-support">External command support</a></li>
+<a href="#external-command-support">External command support</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
-<a href="features.html#diffing">Diffing functionality</a></li>
+<a href="#diffing">Diffing functionality</a></li>
 <li><input disabled="" type="checkbox"/>
-<a href="features.html#huge-file-support-through-memory-mapped-files">Huge file support through memory mapped files</a></li>
+<a href="#huge-file-support-through-memory-mapped-files">Huge file support through memory mapped files</a></li>
 </ul>
 <h1 id="non-features"><a class="header" href="#non-features">Non-features</a></h1>
 <ul>
-<li><a href="features.html#insertion">Insertion</a></li>
-<li><a href="features.html#memory-holes-support-generic-support-for-huge-data">Memory holes support, generic support for huge data</a></li>
+<li><a href="#insertion">Insertion</a></li>
+<li><a href="#memory-holes-support-generic-support-for-huge-data">Memory holes support, generic support for huge data</a></li>
 </ul>
 <h1 id="features-1"><a class="header" href="#features-1">Features</a></h1>
 <h2 id="colorized-values"><a class="header" href="#colorized-values">Colorized values</a></h2>
@@ -239,83 +236,29 @@ To be implemented.</p>
 <p>Originally, I wanted to have a generic mechanism for loading only parts of files, but I found that
 it would make the implementation way more complex, and possibly inefficient, so I dropped the idea.
 Huge files will be eventually supported through memory mapped file support.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="command-line-api"><a class="header" href="#command-line-api">Command line API</a></h1>
-<p>Hexerator aims to support a wide variety of use cases, so it
-exposes a lot of different options.</p>
-<p>Here is the help generated by <code>hexerator --help</code>:</p>
-<pre><code>hexerator
-
-USAGE:
-    hexerator [OPTIONS] [FILE]
-
-ARGS:
-    &lt;FILE&gt;    The file to read
-
-OPTIONS:
-    -h, --help                     Print help information
-        --hard-seek &lt;HARD_SEEK&gt;    Seek to offset, consider it beginning of the file in the editor
-        --instance                 Open content in existing instance
-    -j &lt;JUMP&gt;                      Jump to offset on startup
-        --load-recent              Load most recently used file
-        --read-only                Open file as read-only, without writing privileges
-        --stream                   Specify source as a streaming source (for example, standard
-                                   streams). Sets read-only attribute
-        --take &lt;TAKE&gt;              Read only this many bytes
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="hexerator-design-document"><a class="header" href="#hexerator-design-document">Hexerator design document</a></h1>
-<h2 id="goals"><a class="header" href="#goals">Goals</a></h2>
-<p>Hexerator is a hex editor aiming to aid in pattern recognition and binary file discovery.
-It also aims to be a good and versatile hex editor usable in a large amount of scenarios,
-including editing <code>/proc/id/mem</code> and reading streaming sources, making it usable to read
-piped data.</p>
-<h2 id="user-interface"><a class="header" href="#user-interface">User interface</a></h2>
-<h3 id="perspective"><a class="header" href="#perspective">Perspective</a></h3>
-<p>A <code>Perspective</code> is a view into a <code>Region</code> with a specific <code>column count</code>.</p>
-<p>A variable column count is very helpful for better recognizing certain patterns in data, and is one of the core features of hexerator. A <code>Perspective</code> on its own doesn't really do much. To make use of perspectives, there are <code>View</code>s.</p>
-<h3 id="view"><a class="header" href="#view">View</a></h3>
-<p>A <code>View</code> is a region on the <code>Viewport</code> that provides a look into the data presented by a perspective. A view can be one of multiple kinds, like hex, ascii, block (pixel, kind of like a minimap), and it's scrollable, allowing you to explore different parts of a perspective. You can have multiple views on the <code>Viewport</code>. There is a <code>focused</code> view that you are currently focused on and scrolling/editing, etc.
-By default, all views that share the same perspective sync their scroll offsets with the <code>focused</code> view. This behavior can be turned off if independent scrolling is desired.</p>
-<h3 id="viewport"><a class="header" href="#viewport">Viewport</a></h3>
-<p>The <code>Viewport</code> is the area in the window where the <code>Views</code> are laid out.
-The other things that take up space in the window are the UI panels and windows.</p>
-<h2 id="concepts"><a class="header" href="#concepts">Concepts</a></h2>
-<h3 id="bindata"><a class="header" href="#bindata">BinData</a></h3>
-<p>The <code>BinData</code> is the raw binary data opened inside hex editor.
-It can be opened from a file, or streamed from a streaming source, like a pipe.</p>
-<h3 id="region"><a class="header" href="#region">Region</a></h3>
-<p>A <code>Region</code> is a slice of the <code>BinData</code>.
-It has a <code>start</code> offset which determines where it begins,
-and an <code>end</code> offset which determines where it ends.</p>
-<p>A <code>Region</code> can be given a <code>name</code> to give it an easy to remember
-identifier and also help remember what it's about.</p>
-<p>It can also have a <code>description</code> which can give further useful information about it.</p>
-<h3 id="meta"><a class="header" href="#meta">Meta</a></h3>
-<p>A <code>Meta</code> is all the metadata about a binary format. It can include things like <code>Region</code>s and <code>View</code>s that aid understanding
-of a binary format.</p>
-<h2 id="limits"><a class="header" href="#limits">Limits</a></h2>
-<p>To make development easier, and help keep my sanity, hexerator defines some value limits.</p>
-<h3 id="file-size"><a class="header" href="#file-size">File size</a></h3>
-<p>The supported file size is <code>min(usize, i64)</code>, which is ~4GB on 32 bit platforms,
-and practically limitless on 64 bit platforms. 16 bit platforms are not supported.</p>
-<h3 id="resolution-and-mouse-position"><a class="header" href="#resolution-and-mouse-position">Resolution and mouse position</a></h3>
-<p>These are i16, meaning values higher than 32767 are not supported.
-The minimum supported resolution is 920x620. The ui is not designed and tested for
-resolutions lower than that.</p>
-<h3 id="block-size"><a class="header" href="#block-size">Block size</a></h3>
-<p>A block, or cell (final name not decided) is the element that displays a value.
-Like a hex pair, an ascii character, etc.
-The size range is <code>1..i16::MAX</code>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="what-is-hexerator.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="commandline.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="what-is-hexerator.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="commandline.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -331,10 +274,5 @@ The size range is <code>1..i16::MAX</code>.</p>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
     </body>
 </html>

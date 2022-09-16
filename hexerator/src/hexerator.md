@@ -7,3 +7,5 @@ to be a good general-purpose hex editor, suitable for a wide range of uses.
 
 Here is what it looks like:
 ![screenshot](./screenshots/screenshot.png)
+
+[Click here to get Hexerator!](./get.md)

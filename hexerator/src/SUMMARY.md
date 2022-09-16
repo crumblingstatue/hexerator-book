@@ -13,3 +13,4 @@
 # Appendix
 - [Command line flags](./commandline.md)
 - [Design](./design.md)
+- [Contributing](./contributing.md)

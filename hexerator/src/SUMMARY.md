@@ -1,6 +1,6 @@
 # Summary
 
-[What is hexerator?](./what-is-hexerator.md)
+[Hexerator](./hexerator.md)
 [Features](./features.md)
 
 # Appendix

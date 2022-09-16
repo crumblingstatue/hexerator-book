@@ -4,3 +4,6 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Hexerator"
+
+[output.html]
+git-repository-url = "https://github.com/crumblingstatue/hexerator"

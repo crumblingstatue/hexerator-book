@@ -1,5 +1,13 @@
 # Get Hexerator
 
+**Note:** Hexerator is a work-in-progress.
+It's not polished and there are bugs.
+Feedback and bug reports are welcome on the [git repository](https://github.com/crumblingstatue/hexerator).
+The meta file format is also not yet stable, so you might not be able to open your metafile after upgrading
+to a new version of Hexerator.
+
+The current version is `0.1.0`.
+
 ## Prebuilt versions
 
 ### Windows

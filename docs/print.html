@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="get.html"><strong aria-hidden="true">1.</strong> Get Hexerator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/build-from-source.html"><strong aria-hidden="true">1.1.</strong> Building from source</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/ui-overview.html"><strong aria-hidden="true">2.</strong> Ui Overview</a></li><li class="chapter-item expanded "><a href="getting-started/meta-overview.html"><strong aria-hidden="true">3.</strong> Meta overview</a></li><li class="chapter-item expanded "><a href="getting-started/basic-operations.html"><strong aria-hidden="true">4.</strong> Basic operations</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">5.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">6.</strong> Design</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -111,6 +111,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/crumblingstatue/hexerator" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -141,10 +144,11 @@
 to be a good general-purpose hex editor, suitable for a wide range of uses.</p>
 <p>Here is what it looks like:
 <img src="./screenshots/screenshot.png" alt="screenshot" /></p>
+<p><a href="./get.html">Click here to get Hexerator!</a></p>
 <div style="break-before: page; page-break-before: always;"></div><p>Legend:</p>
 <ul>
 <li><input disabled="" type="checkbox"/>
-= Unimplemented</li>
+= Planned</li>
 <li><input disabled="" type="checkbox" checked=""/>
 = Implemented</li>
 </ul>
@@ -193,13 +197,11 @@ to be a good general-purpose hex editor, suitable for a wide range of uses.</p>
 <h2 id="easy-data-alignment"><a class="header" href="#easy-data-alignment">Easy data alignment</a></h2>
 <p>Hexerator considers it important to easily align data with shortcut keys. Proper alignment can make a lot of difference
 with pattern recognition.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=GhPh_y1PjTU"><img src="https://img.youtube.com/vi/GhPh_y1PjTU/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/GhPh_y1PjTU" title="Viewing Cave Story credits slide show with hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="process-memory-editing"><a class="header" href="#process-memory-editing">Process Memory editing</a></h2>
 <p>Built-in support for opening memory of a process and viewing/editing it.
 Can be used to cheat in games, or discover how different applications store data in memory.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=OPHMIEW_vh4"><img src="https://img.youtube.com/vi/OPHMIEW_vh4/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="699" src="https://www.youtube.com/embed/OPHMIEW_vh4" title="Hexerator: Process memory editing demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>You need to run hexerator with root/admin privileges to open memory of other processes.</p>
 <h2 id="multiple-source-types"><a class="header" href="#multiple-source-types">Multiple source types</a></h2>
 <p>Hexerator supports opening both files and streamed sources like standard input or character devices like <code>/dev/urandom</code>.</p>
@@ -220,8 +222,7 @@ different column counts and other configurable properties.</p>
 </ul>
 <h2 id="external-command-support"><a class="header" href="#external-command-support">External command support</a></h2>
 <p>Support for executing a custom external command on selected data.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=xnw4cdD9r-w"><img src="https://img.youtube.com/vi/xnw4cdD9r-w/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/xnw4cdD9r-w" title="Playing sounds in binary files with Hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="diffing"><a class="header" href="#diffing">Diffing</a></h2>
 <p>There is basic support for showing differences between</p>
 <ul>
@@ -243,6 +244,162 @@ To be implemented.</p>
 <p>Originally, I wanted to have a generic mechanism for loading only parts of files, but I found that
 it would make the implementation way more complex, and possibly inefficient, so I dropped the idea.
 Huge files will be eventually supported through memory mapped file support.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="get-hexerator"><a class="header" href="#get-hexerator">Get Hexerator</a></h1>
+<h2 id="prebuilt-versions"><a class="header" href="#prebuilt-versions">Prebuilt versions</a></h2>
+<h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
+<ul>
+<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.1.0/hexerator-build-win-x86_64.zip">64 bit</a></li>
+</ul>
+<p>There are currently no other prebuilt versions.</p>
+<h2 id="building-from-source"><a class="header" href="#building-from-source">Building from source</a></h2>
+<p>You can follow the instructions <a href="./getting-started/build-from-source.html">here</a> to build Hexerator from source.</p>
+<h2 id="other-links"><a class="header" href="#other-links">Other links</a></h2>
+<ul>
+<li><a href="https://github.com/crumblingstatue/hexerator">Git repository</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="building-from-source-1"><a class="header" href="#building-from-source-1">Building from source</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
+<li><a href="https://www.sfml-dev.org/">SFML</a> 2.5</li>
+<li>A C++ compiler for building some native dependencies (GCC, Clang, MSVC)</li>
+</ul>
+<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
+<ol>
+<li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
+<li>Extract the source somewhere</li>
+<li>Make sure you have SFML set up correctly. You might need to <a href="https://github.com/jeremyletang/rust-sfml#environment-variables">set some environment variables</a>.</li>
+<li>Ensure you're using an up-to-date nightly rust. Hexerator is using nightly Rust for the time being.</li>
+<li>Open up a terminal, and change to the directory where you extracted Hexerator.</li>
+<li>Run <code>cargo build --release</code></li>
+<li>There will be a hexerator binary built in the <code>target/release</code> directory.</li>
+<li>On windows, you might need to copy over the <code>.dll</code> files from the <code>bin</code> folder of your SFML location.
+Do this if you're getting .dll related errors.
+Try copying the .dll files to wherever you will be running Hexerator from.</li>
+</ol>
+<p>If you run into trouble you can't seem to solve, you can ask for help at <a href="https://github.com/crumblingstatue/hexerator/discussions">https://github.com/crumblingstatue/hexerator/discussions</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
+<p>Open a file either with a <a href="getting-started/../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
+<p>You should be greeted with a sight similar to this:</p>
+<p><img src="getting-started/../screenshots/ui-overview.png" alt="ui overview" /></p>
+<h2 id="menu-bar"><a class="header" href="#menu-bar">Menu bar</a></h2>
+<p>At the top is the menu bar. It contains most actions you can perform.
+Many actions also have shortcut keys, which are displayed on the right side of the menu buttons.</p>
+<h2 id="views"><a class="header" href="#views">Views</a></h2>
+<p>At the center are the views. Views are the main way you can view and interact with the file you opened.
+By default, you get 3 views:</p>
+<ol>
+<li>A Hex view, which displays data in a <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal format</a>.</li>
+<li>A Text view, which makes it easier to recognize text.</li>
+<li>A Block view, which can serve as a minimap, or display embedded graphical data.</li>
+</ol>
+<h2 id="interact-mode"><a class="header" href="#interact-mode">Interact mode</a></h2>
+<p>Hexerator has two interaction modes.</p>
+<h3 id="view-mode"><a class="header" href="#view-mode">View mode</a></h3>
+<p>Press <code>F1</code> to activate.</p>
+<p>This mode is used to navigate around the file in order to discover its contents.</p>
+<ul>
+<li>The arrow keys scroll the active view, letting you navigate around the file.</li>
+<li>You can hold down <code>left shift</code> to scroll faster.</li>
+<li><code>Page up</code> and <code>Page down</code> keys scroll a page's worth of content.</li>
+<li><code>Home</code> and <code>End</code> navigate to the beginning and end of the file respectively.</li>
+</ul>
+<h3 id="edit-mode"><a class="header" href="#edit-mode">Edit mode</a></h3>
+<p>Press <code>F2</code> to activate.</p>
+<p>This mode is used to edit the file by entering text through the keyboard.</p>
+<ul>
+<li>The arrow keys move the edit cursor.</li>
+</ul>
+<h2 id="inspect-panel"><a class="header" href="#inspect-panel">Inspect panel</a></h2>
+<p>The inspect panel provides multiple interpretations of the data the edit cursor or mouse is pointing at.
+It can be useful in figuring out what type of data we're dealing with.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="meta-overview"><a class="header" href="#meta-overview">Meta overview</a></h1>
+<p>In order to understand how to use Hexerator, we'll establish some basic concepts.</p>
+<h2 id="what-is-the-meta"><a class="header" href="#what-is-the-meta">What is the Meta?</a></h2>
+<p>When you open a file with Hexerator, you're opening a raw binary file.
+The raw binary file itself doesn't dictate how a hex editor should display it, or how to interpret
+the raw binary data contained within.
+Instead, it's up to the user to figure out all that stuff.
+The <strong>Meta</strong> contains all the information on how to meaningfully interpret and display the data.
+It can also contain various notes and discoveries made by the user.</p>
+<h2 id="meta-components"><a class="header" href="#meta-components">Meta components</a></h2>
+<ul>
+<li><a href="getting-started/meta-overview.html#regions">Regions</a></li>
+<li><a href="getting-started/meta-overview.html#perspectives">Perspectives</a></li>
+<li><a href="getting-started/meta-overview.html#views">Views</a></li>
+<li><a href="getting-started/meta-overview.html#layouts">Layouts</a></li>
+<li><a href="getting-started/meta-overview.html#bookmarks">Bookmarks</a></li>
+</ul>
+<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
+<p>Regions are the most basic metadata. They are used to mark regions of the file that are meaningfully different.
+For example an executable might contain a header, executable code, and data.
+These could be marked as 3 different regions in Hexerator.</p>
+<p>The default region is the entire file.</p>
+<p>You can select <code>Meta-&gt;Regions</code> from the top menu, or press <code>F8</code> to bring up a list of regions, and create
+new ones.</p>
+<p>In order to create a new region, you first need to <a href="getting-started/./basic-operations.html#a-b-select">make a selection</a>.</p>
+<h2 id="perspectives"><a class="header" href="#perspectives">Perspectives</a></h2>
+<p>Perspectives tell Hexerator how to align the data, by setting the number of columns used to display them.
+Each perspective has an associated <a href="getting-started/meta-overview.html#regions">region</a>.</p>
+<p>You can press <code>ctrl + Left</code> and <code>ctrl + Right</code> arrow keys in <code>View</code> mode to adjust the column count
+for the current perspective.</p>
+<p>Additionally, perspectives have a special mode to flip the row order, to display rows upside down.
+This is useful because sometimes things like images are stored upside down in binary files.
+Weird, I know.</p>
+<p>You can select <code>Perspective-&gt;Perspectives</code> from the top menu, or press <code>F7</code> to bring up a list of
+perspectives, and create new ones.</p>
+<h2 id="views-1"><a class="header" href="#views-1">Views</a></h2>
+<p>Views are the windows through which data is viewed and interacted with.
+Each view has an associated <a href="getting-started/meta-overview.html#perspectives">perspective</a>.
+Views that share the same perspective scroll together. So if the hex view of a perspective is scrolled,
+the text and block views scroll along with it.</p>
+<p>Currently there are 4 basic types of views</p>
+<ul>
+<li>Hex</li>
+<li>Decimal</li>
+<li>Text</li>
+<li>Block</li>
+</ul>
+<p>You can right click a view and select <code>View properties...</code> to look at and change the properties
+of a view.</p>
+<p>You can also select <code>View-&gt;Views</code> from the top menu, or press <code>F6</code> to bring up a list of views,
+and create new views.</p>
+<h2 id="layouts"><a class="header" href="#layouts">Layouts</a></h2>
+<p>Layouts are groups of views that are displayed together.
+You can create multiple layouts that show different places in the file in different ways.</p>
+<p>A layout consists of one or more rows, and each row can contain one or more view.
+Hexerator will try to lay out the views in a sensible manner, based on the row and column they belong to.</p>
+<p>The default layout is a Hex view, a Text view, and a Block view side by side.</p>
+<p>You can select <code>View-&gt;Layouts</code> from the top menu, or press <code>F5</code> to bring up a list of layouts, and
+edit the current layout, or add new ones.</p>
+<h2 id="bookmarks-1"><a class="header" href="#bookmarks-1">Bookmarks</a></h2>
+<p>Bookmarks are places of interest in the data at various offsets.
+They can also additionally be assigned a data type, which allows them
+to show a handle to the data at their offset, which shows the value and allows it to be edited.</p>
+<p>You can select <code>Meta-&gt;Bookmarks</code> from the top menu, or press <code>F9</code> to show a list of bookmarks, and
+add new ones.</p>
+<p>You can also right click a location in a view, and select <code>Add bookmark</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-operations"><a class="header" href="#basic-operations">Basic operations</a></h1>
+<h2 id="a-b-select"><a class="header" href="#a-b-select">A-B select</a></h2>
+<p>Click somewhere in a view to set the cursor to that location.
+You can then press <code>shift+1</code> in View mode to set the <code>A</code> point of a selection,
+and <code>shift+2</code> to set the <code>B</code> point of a selection.
+Once you have both an <code>A</code> and a <code>B</code> point, the selection is the region spanning
+<code>A</code> and <code>B</code>.</p>
+<p>Once you have a selection, you can do various things with it.</p>
+<ul>
+<li>Add a region by right clicking, and selecting <code>Add region as selection</code></li>
+<li>Fill using the fill options in the <code>Edit</code> menu</li>
+<li>Run an external command on the selection using <code>Edit-&gt;External command...</code></li>
+<li>Unselect with <code>Esc</code></li>
+</ul>
+<h2 id="select-all"><a class="header" href="#select-all">Select all</a></h2>
+<p>You can select everything in a view with <code>Edit-&gt;Select all in view</code> or <code>Ctrl+A</code>.</p>
+<h2 id="other-operations"><a class="header" href="#other-operations">Other operations</a></h2>
+<p>Documentation is a work-in-progress.
+Use the top menu to discover the kinds of things you can do in Hexerator!
+Also don't be afraid to right-click stuff.
+Right clicking things might reveal additional operations you can do.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="command-line-api"><a class="header" href="#command-line-api">Command line API</a></h1>
 <p>Hexerator aims to support a wide variety of use cases, so it
 exposes a lot of different options.</p>
@@ -258,10 +415,10 @@ ARGS:
 OPTIONS:
     -h, --help                     Print help information
         --hard-seek &lt;HARD_SEEK&gt;    Seek to offset, consider it beginning of the file in the editor
-        --instance                 Open content in existing instance
     -j &lt;JUMP&gt;                      Jump to offset on startup
-        --load-recent              Load most recently used file
+        --meta &lt;META&gt;              Load this metafile
         --read-only                Open file as read-only, without writing privileges
+        --recent                   Open most recently used file
         --stream                   Specify source as a streaming source (for example, standard
                                    streams). Sets read-only attribute
         --take &lt;TAKE&gt;              Read only this many bytes

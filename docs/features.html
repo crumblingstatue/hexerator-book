@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html" class="active">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html" class="active">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="get.html"><strong aria-hidden="true">1.</strong> Get Hexerator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/build-from-source.html"><strong aria-hidden="true">1.1.</strong> Building from source</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/ui-overview.html"><strong aria-hidden="true">2.</strong> Ui Overview</a></li><li class="chapter-item expanded "><a href="getting-started/meta-overview.html"><strong aria-hidden="true">3.</strong> Meta overview</a></li><li class="chapter-item expanded "><a href="getting-started/basic-operations.html"><strong aria-hidden="true">4.</strong> Basic operations</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html"><strong aria-hidden="true">5.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">6.</strong> Design</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -110,6 +110,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/crumblingstatue/hexerator" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -137,7 +140,7 @@
                         <p>Legend:</p>
 <ul>
 <li><input disabled="" type="checkbox"/>
-= Unimplemented</li>
+= Planned</li>
 <li><input disabled="" type="checkbox" checked=""/>
 = Implemented</li>
 </ul>
@@ -186,13 +189,11 @@
 <h2 id="easy-data-alignment"><a class="header" href="#easy-data-alignment">Easy data alignment</a></h2>
 <p>Hexerator considers it important to easily align data with shortcut keys. Proper alignment can make a lot of difference
 with pattern recognition.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=GhPh_y1PjTU"><img src="https://img.youtube.com/vi/GhPh_y1PjTU/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/GhPh_y1PjTU" title="Viewing Cave Story credits slide show with hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="process-memory-editing"><a class="header" href="#process-memory-editing">Process Memory editing</a></h2>
 <p>Built-in support for opening memory of a process and viewing/editing it.
 Can be used to cheat in games, or discover how different applications store data in memory.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=OPHMIEW_vh4"><img src="https://img.youtube.com/vi/OPHMIEW_vh4/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="699" src="https://www.youtube.com/embed/OPHMIEW_vh4" title="Hexerator: Process memory editing demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>You need to run hexerator with root/admin privileges to open memory of other processes.</p>
 <h2 id="multiple-source-types"><a class="header" href="#multiple-source-types">Multiple source types</a></h2>
 <p>Hexerator supports opening both files and streamed sources like standard input or character devices like <code>/dev/urandom</code>.</p>
@@ -213,8 +214,7 @@ different column counts and other configurable properties.</p>
 </ul>
 <h2 id="external-command-support"><a class="header" href="#external-command-support">External command support</a></h2>
 <p>Support for executing a custom external command on selected data.</p>
-<p>You can see a YouTube video of it in action here:</p>
-<p><a href="https://www.youtube.com/watch?v=xnw4cdD9r-w"><img src="https://img.youtube.com/vi/xnw4cdD9r-w/0.jpg" alt="Video" /></a></p>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/xnw4cdD9r-w" title="Playing sounds in binary files with Hexerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="diffing"><a class="header" href="#diffing">Diffing</a></h2>
 <p>There is basic support for showing differences between</p>
 <ul>
@@ -244,7 +244,7 @@ Huge files will be eventually supported through memory mapped file support.</p>
                             <a rel="prev" href="hexerator.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="commandline.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="get.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -256,7 +256,7 @@ Huge files will be eventually supported through memory mapped file support.</p>
                     <a rel="prev" href="hexerator.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="commandline.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="get.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html" class="active"><strong aria-hidden="true">1.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">2.</strong> Design</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="hexerator.html">Hexerator</a></li><li class="chapter-item expanded affix "><a href="features.html">Features</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="get.html"><strong aria-hidden="true">1.</strong> Get Hexerator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting-started/build-from-source.html"><strong aria-hidden="true">1.1.</strong> Building from source</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started/ui-overview.html"><strong aria-hidden="true">2.</strong> Ui Overview</a></li><li class="chapter-item expanded "><a href="getting-started/meta-overview.html"><strong aria-hidden="true">3.</strong> Meta overview</a></li><li class="chapter-item expanded "><a href="getting-started/basic-operations.html"><strong aria-hidden="true">4.</strong> Basic operations</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="commandline.html" class="active"><strong aria-hidden="true">5.</strong> Command line flags</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">6.</strong> Design</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -109,6 +109,9 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/crumblingstatue/hexerator" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -149,10 +152,10 @@ ARGS:
 OPTIONS:
     -h, --help                     Print help information
         --hard-seek &lt;HARD_SEEK&gt;    Seek to offset, consider it beginning of the file in the editor
-        --instance                 Open content in existing instance
     -j &lt;JUMP&gt;                      Jump to offset on startup
-        --load-recent              Load most recently used file
+        --meta &lt;META&gt;              Load this metafile
         --read-only                Open file as read-only, without writing privileges
+        --recent                   Open most recently used file
         --stream                   Specify source as a streaming source (for example, standard
                                    streams). Sets read-only attribute
         --take &lt;TAKE&gt;              Read only this many bytes
@@ -162,7 +165,7 @@ OPTIONS:
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="features.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="getting-started/basic-operations.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                             <a rel="next" href="design.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
@@ -174,7 +177,7 @@ OPTIONS:
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="features.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="getting-started/basic-operations.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                     <a rel="next" href="design.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">

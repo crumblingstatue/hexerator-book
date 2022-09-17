@@ -7,3 +7,6 @@ title = "Hexerator"
 
 [output.html]
 git-repository-url = "https://github.com/crumblingstatue/hexerator"
+
+[build]
+build-dir = "../docs"

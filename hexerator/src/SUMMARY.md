@@ -2,6 +2,7 @@
 
 [Hexerator](./hexerator.md)
 [Features](./features.md)
+[News](./news.md)
 
 # Getting started
 - [Get Hexerator](./get.md)

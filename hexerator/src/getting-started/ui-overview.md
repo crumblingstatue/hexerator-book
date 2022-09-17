@@ -34,6 +34,8 @@ This mode is used to navigate around the file in order to discover its contents.
 - You can hold down `left shift` to scroll faster.
 - `Page up` and `Page down` keys scroll a page's worth of content.
 - `Home` and `End` navigate to the beginning and end of the file respectively.
+- `ctrl` + `Left`/`Right` arrow keys to change the column count of your active [perspective](./meta-overview.md#perspectives).
+- `ctrl` + `Up`/`Down` arrow keys to change the starting offset of your active [region](./meta-overview.md#regions).
 
 ### Edit mode
 

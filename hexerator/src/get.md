@@ -9,7 +9,7 @@ to a new version of Hexerator.
 
 You can help by [contributing](./contributing.md)!
 
-The current version is `0.2.0`.
+The current version is [`0.2.0`](https://github.com/crumblingstatue/hexerator/releases/tag/v0.2.0).
 
 ## Requirements
 

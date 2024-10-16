@@ -183,15 +183,14 @@ Feedback and bug reports are welcome on the <a href="https://github.com/crumblin
 <p>The meta file format is also not yet stable, so you might not be able to open your metafile after upgrading
 to a new version of Hexerator.</p>
 <p>You can help by <a href="./contributing.html">contributing</a>!</p>
-<p>The current version is <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.2.0"><code>0.2.0</code></a>.</p>
+<p>The current version is <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.3.0"><code>0.3.0</code></a>.</p>
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>Check out the <a href="./getting-started/requirements.html">requirements</a> before getting Hexerator.</p>
 <h2 id="prebuilt-versions"><a class="header" href="#prebuilt-versions">Prebuilt versions</a></h2>
-<h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
 <ul>
-<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.2.0/hexerator-win-x86_64.zip">64 bit</a></li>
+<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-win-x86_64.zip">Windows 64 bit</a></li>
+<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-linux-x86_64.zip">Linux 64 bit</a></li>
 </ul>
-<p>There are currently no other prebuilt versions.</p>
 <h2 id="building-from-source"><a class="header" href="#building-from-source">Building from source</a></h2>
 <p>You can follow the instructions <a href="./getting-started/build-from-source.html">here</a> to build Hexerator from source.</p>
 <h2 id="other-links"><a class="header" href="#other-links">Other links</a></h2>
@@ -228,22 +227,6 @@ to a new version of Hexerator.</p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

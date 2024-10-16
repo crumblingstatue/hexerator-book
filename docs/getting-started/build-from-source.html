@@ -182,7 +182,11 @@
 <li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
 <li>A C++ compiler and <a href="https://cmake.org/">CMake</a> for building some native dependencies.</li>
 </ul>
-<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
+<h2 id="building-with-cargo"><a class="header" href="#building-with-cargo">Building with cargo</a></h2>
+<p>If you have <a href="https://rustup.rs/">rustup</a> installed, you can install Hexerator with cargo.</p>
+<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.3.0
+</code></pre>
+<h2 id="building-manually"><a class="header" href="#building-manually">Building manually</a></h2>
 <ol>
 <li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
 <li>Extract the source somewhere</li>
@@ -222,22 +226,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

@@ -284,6 +284,8 @@ To be implemented.</p>
 it would make the implementation way more complex, and possibly inefficient, so I dropped the idea.
 Huge files will be eventually supported through memory mapped file support.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="news"><a class="header" href="#news">News</a></h1>
+<h2 id="hexerator-03-released---2024-10-16"><a class="header" href="#hexerator-03-released---2024-10-16">Hexerator 0.3 released! - 2024-10-16</a></h2>
+<p>Check out <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.3.0">the release page</a>!</p>
 <h2 id="hexerator-02-released---2023-01-27"><a class="header" href="#hexerator-02-released---2023-01-27">Hexerator 0.2 released! - 2023-01-27</a></h2>
 <p>Check out <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.2.0">the release page</a>!</p>
 <h2 id="hexerator-01-released---2022-09-16"><a class="header" href="#hexerator-01-released---2022-09-16">Hexerator 0.1 released! - 2022-09-16</a></h2>
@@ -296,15 +298,14 @@ Feedback and bug reports are welcome on the <a href="https://github.com/crumblin
 <p>The meta file format is also not yet stable, so you might not be able to open your metafile after upgrading
 to a new version of Hexerator.</p>
 <p>You can help by <a href="./contributing.html">contributing</a>!</p>
-<p>The current version is <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.2.0"><code>0.2.0</code></a>.</p>
+<p>The current version is <a href="https://github.com/crumblingstatue/hexerator/releases/tag/v0.3.0"><code>0.3.0</code></a>.</p>
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>Check out the <a href="./getting-started/requirements.html">requirements</a> before getting Hexerator.</p>
 <h2 id="prebuilt-versions"><a class="header" href="#prebuilt-versions">Prebuilt versions</a></h2>
-<h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
 <ul>
-<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.2.0/hexerator-win-x86_64.zip">64 bit</a></li>
+<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-win-x86_64.zip">Windows 64 bit</a></li>
+<li><a href="https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-linux-x86_64.zip">Linux 64 bit</a></li>
 </ul>
-<p>There are currently no other prebuilt versions.</p>
 <h2 id="building-from-source"><a class="header" href="#building-from-source">Building from source</a></h2>
 <p>You can follow the instructions <a href="./getting-started/build-from-source.html">here</a> to build Hexerator from source.</p>
 <h2 id="other-links"><a class="header" href="#other-links">Other links</a></h2>
@@ -337,7 +338,11 @@ making it fairly GPU intensive.</p>
 <li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
 <li>A C++ compiler and <a href="https://cmake.org/">CMake</a> for building some native dependencies.</li>
 </ul>
-<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
+<h2 id="building-with-cargo"><a class="header" href="#building-with-cargo">Building with cargo</a></h2>
+<p>If you have <a href="https://rustup.rs/">rustup</a> installed, you can install Hexerator with cargo.</p>
+<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.3.0
+</code></pre>
+<h2 id="building-manually"><a class="header" href="#building-manually">Building manually</a></h2>
 <ol>
 <li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
 <li>Extract the source somewhere</li>
@@ -568,22 +573,6 @@ to Hexerator and want to build it from source.</p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

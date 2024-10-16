@@ -1,5 +1,9 @@
 # News
 
+## Hexerator 0.3 released! - 2024-10-16
+
+Check out [the release page](https://github.com/crumblingstatue/hexerator/releases/tag/v0.3.0)!
+
 ## Hexerator 0.2 released! - 2023-01-27
 
 Check out [the release page](https://github.com/crumblingstatue/hexerator/releases/tag/v0.2.0)!

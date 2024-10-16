@@ -5,7 +5,15 @@
 - Up-to-date nightly [Rust](https://www.rust-lang.org/)
 - A C++ compiler and [CMake](https://cmake.org/) for building some native dependencies.
 
-## Steps
+## Building with cargo
+
+If you have [rustup](https://rustup.rs/) installed, you can install Hexerator with cargo.
+
+```sh
+$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.3.0
+```
+
+## Building manually
 
 1. Get the latest source zip or tarball from the [releases page](https://github.com/crumblingstatue/hexerator/releases).
 2. Extract the source somewhere

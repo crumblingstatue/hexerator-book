@@ -335,21 +335,16 @@ making it fairly GPU intensive.</p>
 <h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
 <ul>
 <li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
-<li><a href="https://www.sfml-dev.org/">SFML</a> 2.5</li>
-<li>A C++ compiler for building some native dependencies (GCC, Clang, MSVC)</li>
+<li>A C++ compiler and <a href="https://cmake.org/">CMake</a> for building some native dependencies.</li>
 </ul>
 <h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
 <ol>
 <li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
 <li>Extract the source somewhere</li>
-<li>Make sure you have SFML set up correctly. You might need to <a href="https://github.com/jeremyletang/rust-sfml#environment-variables">set some environment variables</a>.</li>
 <li>Ensure you're using an up-to-date nightly rust. Hexerator is using nightly Rust for the time being.</li>
 <li>Open up a terminal, and change to the directory where you extracted Hexerator.</li>
 <li>Run <code>cargo build --release</code></li>
 <li>There will be a hexerator binary built in the <code>target/release</code> directory.</li>
-<li>On windows, you might need to copy over the <code>.dll</code> files from the <code>bin</code> folder of your SFML location.
-Do this if you're getting .dll related errors.
-Try copying the .dll files to wherever you will be running Hexerator from.</li>
 </ol>
 <p>If you run into trouble you can't seem to solve, you can ask for help at <a href="https://github.com/crumblingstatue/hexerator/discussions">https://github.com/crumblingstatue/hexerator/discussions</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>

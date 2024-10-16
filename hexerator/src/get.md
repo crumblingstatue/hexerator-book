@@ -20,6 +20,10 @@ Check out the [requirements](./getting-started/requirements.md) before getting H
 - [Windows 64 bit](https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-win-x86_64.zip)
 - [Linux 64 bit](https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-linux-x86_64.zip)
 
+## Packages
+
+- [Arch Linux (AUR)](https://aur.archlinux.org/packages/hexerator)
+
 ## Building from source
 
 You can follow the instructions [here](./getting-started/build-from-source.md) to build Hexerator from source.

@@ -14,7 +14,7 @@ Legend:
 - [x] [Lua scripting support](#lua-scripting-support) for various operations, like fill.
 - [x] [External command support](#external-command-support)
 - [x] [Diffing functionality](#diffing)
-- [ ] [Huge file support through memory mapped files](#huge-file-support-through-memory-mapped-files)
+- [x] [Huge file support through memory mapped files](#huge-file-support-through-memory-mapped-files)
 
 # Non-features
 - [Insertion](#insertion)
@@ -89,9 +89,7 @@ It will be better fleshed out in the future
 
 ## Huge file support through memory mapped files
 
-Huge files that couldn't fit in memory can be opened as memory mapped files through a command line
-option.
-To be implemented.
+Huge files that couldn't fit in memory can be opened as memory mapped files.
 
 # Non-features
 
@@ -101,4 +99,3 @@ Insertion would complicate implementation, and for most binary data, including p
 ## Memory holes support, generic support for huge data
 Originally, I wanted to have a generic mechanism for loading only parts of files, but I found that
 it would make the implementation way more complex, and possibly inefficient, so I dropped the idea.
-Huge files will be eventually supported through memory mapped file support.

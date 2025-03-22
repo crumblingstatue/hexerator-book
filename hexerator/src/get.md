@@ -9,7 +9,7 @@ to a new version of Hexerator.
 
 You can help by [contributing](./contributing.md)!
 
-The current version is [`0.3.0`](https://github.com/crumblingstatue/hexerator/releases/tag/v0.3.0).
+The current version is [`0.4.0`](#).
 
 ## Requirements
 
@@ -17,8 +17,8 @@ Check out the [requirements](./getting-started/requirements.md) before getting H
 
 ## Prebuilt versions
 
-- [Windows 64 bit](https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-win-x86_64.zip)
-- [Linux 64 bit](https://github.com/crumblingstatue/hexerator/releases/download/v0.3.0/hexerator-0.3.0-linux-x86_64.zip)
+- [Windows 64 bit](#)
+- [Linux 64 bit](#)
 
 ## Packages
 

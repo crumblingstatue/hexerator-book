@@ -9,4 +9,4 @@ title = "Hexerator"
 git-repository-url = "https://github.com/crumblingstatue/hexerator-book"
 
 [build]
-build-dir = "../docs"
+build-dir = "../docs/0.4.0"

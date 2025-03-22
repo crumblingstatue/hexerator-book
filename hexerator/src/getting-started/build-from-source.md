@@ -10,7 +10,7 @@
 If you have [rustup](https://rustup.rs/) installed, you can install Hexerator with cargo.
 
 ```sh
-$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.3.0
+$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.4.0
 ```
 
 ## Building manually

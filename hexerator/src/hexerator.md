@@ -12,5 +12,5 @@ Here is what it looks like:
 
 ## Tutorial
 
-[Click here](/tutorial/00-aitd.md) for a tutorial that guides you through reverse engineering
+[Click here](./tutorial/00-aitd.md) for a tutorial that guides you through reverse engineering
 a save file for a video game.

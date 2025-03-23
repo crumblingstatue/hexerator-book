@@ -2,7 +2,7 @@
 
 Once you have opened the save file, you should see something like this.
 
-![Screenshot](/screenshots/tutorial/default-meta.jpg)
+![Screenshot](../screenshots/tutorial/default-meta.jpg)
 
 By default, there are 3 views:
 
@@ -19,6 +19,6 @@ Hold down `ctrl` and the left and right arrow keys to shift the perspective arou
 Try messing around until you can make sense of the image.
 SPOILER: In this case, the magic number is 80 columns.
 
-![Screenshot](/screenshots/tutorial/80-columns.jpg)
+![Screenshot](../screenshots/tutorial/80-columns.jpg)
 
 That makes a lot more sense!

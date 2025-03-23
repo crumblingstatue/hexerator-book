@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Building from source - Hexerator</title>
+        <title>Opening the file - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,36 +155,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="building-from-source"><a class="header" href="#building-from-source">Building from source</a></h1>
-<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
-<ul>
-<li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
-<li>A C++ compiler and <a href="https://cmake.org/">CMake</a> for building some native dependencies.</li>
-</ul>
-<h2 id="building-with-cargo"><a class="header" href="#building-with-cargo">Building with cargo</a></h2>
-<p>If you have <a href="https://rustup.rs/">rustup</a> installed, you can install Hexerator with cargo.</p>
-<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.4.0
-</code></pre>
-<h2 id="building-manually"><a class="header" href="#building-manually">Building manually</a></h2>
-<ol>
-<li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
-<li>Extract the source somewhere</li>
-<li>Ensure you're using an up-to-date nightly rust. Hexerator is using nightly Rust for the time being.</li>
-<li>Open up a terminal, and change to the directory where you extracted Hexerator.</li>
-<li>Run <code>cargo build --release</code></li>
-<li>There will be a hexerator binary built in the <code>target/release</code> directory.</li>
-</ol>
-<p>If you run into trouble you can't seem to solve, you can ask for help at <a href="https://github.com/crumblingstatue/hexerator/discussions">https://github.com/crumblingstatue/hexerator/discussions</a>.</p>
+                        <h1 id="opening-the-file"><a class="header" href="#opening-the-file">Opening the file</a></h1>
+<p>Before we can do anything else, we need to open the file.</p>
+<p>We can do this either through the <a href="#gui">GUI</a> or the <a href="#command-line">command line</a>.</p>
+<h2 id="gui"><a class="header" href="#gui">Gui</a></h2>
+<p>In the top menu bar, click <code>File-&gt;Open...</code>, or press <code>ctrl + O</code>.</p>
+<p><img src="/screenshots/tutorial/menu-file-open.jpg" alt="Screenshot" /></p>
+<p>This opens a file dialog where you can pick the file you want to open.</p>
+<p><img src="/screenshots/tutorial/file-open-dialog.jpg" alt="Screenshot" /></p>
+<p>The file dialog is powered by <a href="https://github.com/fluxxcode/egui-file-dialog">egui-file-dialog</a>.
+You can look at a list of key bindings <a href="https://github.com/fluxxcode/egui-file-dialog?tab=readme-ov-file#keybindings">here</a>.</p>
+<h2 id="command-line"><a class="header" href="#command-line">Command Line</a></h2>
+<p>Hexerator offers a <a href="/commandline.html">rich command line API</a>.
+But for the simple case of opening a file, we can just provide the path to the file as the argument.</p>
+<p><code>$ hexerator SAVE0.ITD</code></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../getting-started/requirements.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/00-aitd.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../tutorial/00-aitd.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../tutorial/02-aligning-data.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -194,11 +188,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../getting-started/requirements.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/00-aitd.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../tutorial/00-aitd.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../tutorial/02-aligning-data.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

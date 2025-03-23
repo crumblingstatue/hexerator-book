@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Building from source - Hexerator</title>
+        <title>Tutorial: Alone in the Dark save files - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,36 +155,22 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="building-from-source"><a class="header" href="#building-from-source">Building from source</a></h1>
-<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
-<ul>
-<li>Up-to-date nightly <a href="https://www.rust-lang.org/">Rust</a></li>
-<li>A C++ compiler and <a href="https://cmake.org/">CMake</a> for building some native dependencies.</li>
-</ul>
-<h2 id="building-with-cargo"><a class="header" href="#building-with-cargo">Building with cargo</a></h2>
-<p>If you have <a href="https://rustup.rs/">rustup</a> installed, you can install Hexerator with cargo.</p>
-<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.4.0
-</code></pre>
-<h2 id="building-manually"><a class="header" href="#building-manually">Building manually</a></h2>
-<ol>
-<li>Get the latest source zip or tarball from the <a href="https://github.com/crumblingstatue/hexerator/releases">releases page</a>.</li>
-<li>Extract the source somewhere</li>
-<li>Ensure you're using an up-to-date nightly rust. Hexerator is using nightly Rust for the time being.</li>
-<li>Open up a terminal, and change to the directory where you extracted Hexerator.</li>
-<li>Run <code>cargo build --release</code></li>
-<li>There will be a hexerator binary built in the <code>target/release</code> directory.</li>
-</ol>
-<p>If you run into trouble you can't seem to solve, you can ask for help at <a href="https://github.com/crumblingstatue/hexerator/discussions">https://github.com/crumblingstatue/hexerator/discussions</a>.</p>
+                        <h1 id="tutorial-alone-in-the-dark-save-files"><a class="header" href="#tutorial-alone-in-the-dark-save-files">Tutorial: Alone in the Dark save files</a></h1>
+<p>In this tutorial, we'll go through the process of reverse engineering the save file format
+of the 1992 video game, <a href="https://en.wikipedia.org/wiki/Alone_in_the_Dark_(1992_video_game)">Alone In The Dark</a>.</p>
+<p><img src="/screenshots/tutorial/aitd-save.jpg" alt="Screenshot of the load screen" /></p>
+<p>You can download the save file (<code>SAVE0.ITD</code>) to follow along:</p>
+<p><a href="/assets/SAVE0.ITD">Click here to download SAVE0.ITD</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../getting-started/requirements.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../getting-started/build-from-source.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../tutorial/00-aitd.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../tutorial/01-opening.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -194,11 +180,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../getting-started/requirements.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../getting-started/build-from-source.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../tutorial/00-aitd.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../tutorial/01-opening.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

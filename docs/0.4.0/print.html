@@ -163,6 +163,9 @@ to be a good general-purpose hex editor, suitable for a wide range of uses.</p>
 <p>Here is what it looks like:
 <img src="./screenshots/screenshot.png" alt="screenshot" /></p>
 <p><a href="./get.html">Click here to get Hexerator!</a></p>
+<h2 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h2>
+<p><a href="/tutorial/00-aitd.html">Click here</a> for a tutorial that guides you through reverse engineering
+a save file for a video game.</p>
 <div style="break-before: page; page-break-before: always;"></div><p>Legend:</p>
 <ul>
 <li><input disabled="" type="checkbox"/>
@@ -320,7 +323,7 @@ making it fairly GPU intensive.</p>
 </ul>
 <h2 id="building-with-cargo"><a class="header" href="#building-with-cargo">Building with cargo</a></h2>
 <p>If you have <a href="https://rustup.rs/">rustup</a> installed, you can install Hexerator with cargo.</p>
-<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.3.0
+<pre><code class="language-sh">$ cargo install hexerator --git https://github.com/crumblingstatue/hexerator.git --tag v0.4.0
 </code></pre>
 <h2 id="building-manually"><a class="header" href="#building-manually">Building manually</a></h2>
 <ol>
@@ -332,6 +335,44 @@ making it fairly GPU intensive.</p>
 <li>There will be a hexerator binary built in the <code>target/release</code> directory.</li>
 </ol>
 <p>If you run into trouble you can't seem to solve, you can ask for help at <a href="https://github.com/crumblingstatue/hexerator/discussions">https://github.com/crumblingstatue/hexerator/discussions</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tutorial-alone-in-the-dark-save-files"><a class="header" href="#tutorial-alone-in-the-dark-save-files">Tutorial: Alone in the Dark save files</a></h1>
+<p>In this tutorial, we'll go through the process of reverse engineering the save file format
+of the 1992 video game, <a href="https://en.wikipedia.org/wiki/Alone_in_the_Dark_(1992_video_game)">Alone In The Dark</a>.</p>
+<p><img src="tutorial//screenshots/tutorial/aitd-save.jpg" alt="Screenshot of the load screen" /></p>
+<p>You can download the save file (<code>SAVE0.ITD</code>) to follow along:</p>
+<p><a href="tutorial//assets/SAVE0.ITD">Click here to download SAVE0.ITD</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="opening-the-file"><a class="header" href="#opening-the-file">Opening the file</a></h1>
+<p>Before we can do anything else, we need to open the file.</p>
+<p>We can do this either through the <a href="tutorial/01-opening.html#gui">GUI</a> or the <a href="tutorial/01-opening.html#command-line">command line</a>.</p>
+<h2 id="gui"><a class="header" href="#gui">Gui</a></h2>
+<p>In the top menu bar, click <code>File-&gt;Open...</code>, or press <code>ctrl + O</code>.</p>
+<p><img src="tutorial//screenshots/tutorial/menu-file-open.jpg" alt="Screenshot" /></p>
+<p>This opens a file dialog where you can pick the file you want to open.</p>
+<p><img src="tutorial//screenshots/tutorial/file-open-dialog.jpg" alt="Screenshot" /></p>
+<p>The file dialog is powered by <a href="https://github.com/fluxxcode/egui-file-dialog">egui-file-dialog</a>.
+You can look at a list of key bindings <a href="https://github.com/fluxxcode/egui-file-dialog?tab=readme-ov-file#keybindings">here</a>.</p>
+<h2 id="command-line"><a class="header" href="#command-line">Command Line</a></h2>
+<p>Hexerator offers a <a href="tutorial//commandline.html">rich command line API</a>.
+But for the simple case of opening a file, we can just provide the path to the file as the argument.</p>
+<p><code>$ hexerator SAVE0.ITD</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aligning-data"><a class="header" href="#aligning-data">Aligning Data</a></h1>
+<p>Once you have opened the save file, you should see something like this.</p>
+<p><img src="tutorial//screenshots/tutorial/default-meta.jpg" alt="Screenshot" /></p>
+<p>By default, there are 3 views:</p>
+<ol>
+<li>A hex view, on the left side</li>
+<li>A text view in the center</li>
+<li>A so-called block view on the right. You can think of it like a minimap.</li>
+</ol>
+<p>The block view is showing something funky at the top.
+It almost looks like some kind of garbled up image.
+I wonder if we could look at it from another perspective to better understand what kind of data it is...</p>
+<p>We can do that by shifting the number of columns around.
+Hold down <code>ctrl</code> and the left and right arrow keys to shift the perspective around.
+Try messing around until you can make sense of the image.
+SPOILER: In this case, the magic number is 80 columns.</p>
+<p><img src="tutorial//screenshots/tutorial/80-columns.jpg" alt="Screenshot" /></p>
+<p>That makes a lot more sense!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
 <p>Open a file either with a <a href="getting-started/../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
 <p>You should be greeted with a sight similar to this:</p>

@@ -9,3 +9,8 @@ Here is what it looks like:
 ![screenshot](./screenshots/screenshot.png)
 
 [Click here to get Hexerator!](./get.md)
+
+## Tutorial
+
+[Click here](/tutorial/00-aitd.md) for a tutorial that guides you through reverse engineering
+a save file for a video game.

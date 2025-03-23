@@ -21,4 +21,17 @@ SPOILER: In this case, the magic number is 80 columns.
 
 ![Screenshot](../screenshots/tutorial/80-columns.jpg)
 
-That makes a lot more sense!
+That makes a lot more sense. Although it's split in the middle.
+It would be nice to adjust it so it begins at the left edge of the block view.
+
+No problem. You can press `ctrl` + up and down arrow keys to adjust the offset.
+
+![Screenshot](../screenshots/tutorial/offset-20.jpg)
+
+Alright, this looks very much like the thumbnail for the save file.
+
+We can confirm this by using a custom color palette (which you can download here: [aitd.pal](../assets/aitd.pal))
+
+(TODO: Link to help on how to load custom color palettes)
+
+![Screenshot](../screenshots/tutorial/with-custom-palette.jpg)

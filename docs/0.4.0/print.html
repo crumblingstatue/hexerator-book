@@ -526,6 +526,11 @@ You can press the <code>Delete</code> key to zero out bytes to properly nul term
 <p><img src="tutorial/../screenshots/tutorial/save-edited.jpg" alt="Screenshot" /></p>
 <p>Indeed, it looks like our edit has been successful.</p>
 <p><img src="tutorial/../screenshots/tutorial/testing-the-edit.jpg" alt="Screenshot" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wrapping-up"><a class="header" href="#wrapping-up">Wrapping up</a></h1>
+<p>Hexerator has a lot more features, but currently they are out of the scope of this tutorial.</p>
+<p>I hope you'll have fun exploring them on your own!</p>
+<p>Expect the documentation of Hexerator to improve in the future.</p>
+<p>Contributions to the documentation are welcome at <a href="https://github.com/crumblingstatue/hexerator-book">https://github.com/crumblingstatue/hexerator-book</a>!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
 <p>Open a file either with a <a href="getting-started/../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
 <p>You should be greeted with a sight similar to this:</p>
@@ -800,6 +805,22 @@ to Hexerator and want to build it from source.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

@@ -17,7 +17,11 @@ I wonder if we could look at it from another perspective to better understand wh
 We can do that by shifting the number of columns around.
 Hold down `ctrl` and the left and right arrow keys to shift the perspective around.
 Try messing around until you can make sense of the image.
-SPOILER: In this case, the magic number is 80 columns.
+
+<details>
+<summary>Spoiler</summary>
+In this case, the magic number is 80 columns.
+</details>
 
 ![Screenshot](../screenshots/tutorial/80-columns.jpg)
 
@@ -25,6 +29,11 @@ That makes a lot more sense. Although it's split in the middle.
 It would be nice to adjust it so it begins at the left edge of the block view.
 
 No problem. You can press `ctrl` + up and down arrow keys to adjust the offset.
+
+<details>
+<summary>Spoiler</summary>
+The magic offset in this case is 20.
+</details>
 
 ![Screenshot](../screenshots/tutorial/offset-20.jpg)
 

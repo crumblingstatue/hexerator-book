@@ -369,17 +369,49 @@ It almost looks like some kind of garbled up image.
 I wonder if we could look at it from another perspective to better understand what kind of data it is...</p>
 <p>We can do that by shifting the number of columns around.
 Hold down <code>ctrl</code> and the left and right arrow keys to shift the perspective around.
-Try messing around until you can make sense of the image.
-SPOILER: In this case, the magic number is 80 columns.</p>
+Try messing around until you can make sense of the image.</p>
+<details>
+<summary>Spoiler</summary>
+In this case, the magic number is 80 columns.
+</details>
 <p><img src="tutorial/../screenshots/tutorial/80-columns.jpg" alt="Screenshot" /></p>
 <p>That makes a lot more sense. Although it's split in the middle.
 It would be nice to adjust it so it begins at the left edge of the block view.</p>
 <p>No problem. You can press <code>ctrl</code> + up and down arrow keys to adjust the offset.</p>
+<details>
+<summary>Spoiler</summary>
+The magic offset in this case is 20.
+</details>
 <p><img src="tutorial/../screenshots/tutorial/offset-20.jpg" alt="Screenshot" /></p>
 <p>Alright, this looks very much like the thumbnail for the save file.</p>
 <p>We can confirm this by using a custom color palette (which you can download here: <a href="tutorial/../assets/aitd.pal">aitd.pal</a>)</p>
 <p>(TODO: Link to help on how to load custom color palettes)</p>
 <p><img src="tutorial/../screenshots/tutorial/with-custom-palette.jpg" alt="Screenshot" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="selections-and-regions"><a class="header" href="#selections-and-regions">Selections and Regions</a></h1>
+<p>Now that we have determined where the thumbnail for the save file is, we should note it down,
+and also inform Hexerator about it.</p>
+<h2 id="a-b-selection"><a class="header" href="#a-b-selection">A-B selection</a></h2>
+<p>First, let's select the thumbnail.
+The easiest way we can do this is with a-b selection.
+We'll use the hex view, since it has bigger elements that are easier to click.</p>
+<ul>
+<li>First, click the hex view, then press <code>ctrl+Home</code> (scroll to beginning) to make sure you're scrolled at the beginning of the view.</li>
+<li>Then click the first byte of the view, and press <code>shift+1</code> (a-select).</li>
+</ul>
+<p><img src="tutorial/../screenshots/tutorial/selection-1.jpg" alt="Screenshot" /></p>
+<ul>
+<li>Now you can press <code>End</code> (scroll to last column)</li>
+<li>The click the last byte of the thumbnail, and press <code>shift+2</code> (b-select).</li>
+</ul>
+<p><img src="tutorial/../screenshots/tutorial/select-b.jpg" alt="Screenshot" /></p>
+<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
+<p>Now click <code>Edit -&gt; Selection -&gt; Add as region</code> in the top menu.</p>
+<p><img src="tutorial/../screenshots/tutorial/add-as-region.jpg" alt="Screenshot" /></p>
+<p>This will open the Regions window, where you can name your newly created region.
+Let's name it <code>thumbnail</code>. You can press enter once finished</p>
+<p><img src="tutorial/../screenshots/tutorial/regions-window.jpg" alt="Screenshot" /></p>
+<p>You can open the regions window any time by clicking <code>Meta -&gt; Regions</code> or pressing <code>F8</code>.</p>
+<p><img src="tutorial/../screenshots/tutorial/meta-regions.jpg" alt="Screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
 <p>Open a file either with a <a href="getting-started/../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
 <p>You should be greeted with a sight similar to this:</p>
@@ -434,7 +466,7 @@ It can also contain various notes and discoveries made by the user.</p>
 <li><a href="getting-started/meta-overview.html#layouts">Layouts</a></li>
 <li><a href="getting-started/meta-overview.html#bookmarks">Bookmarks</a></li>
 </ul>
-<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
+<h2 id="regions-1"><a class="header" href="#regions-1">Regions</a></h2>
 <p>Regions are the most basic metadata. They are used to mark regions of the file that are meaningfully different.
 For example an executable might contain a header, executable code, and data.
 These could be marked as 3 different regions in Hexerator.</p>

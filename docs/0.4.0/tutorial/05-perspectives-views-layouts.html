@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Ui Overview - Hexerator</title>
+        <title>Perspectives, Views, Layouts - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,53 +155,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
-<p>Open a file either with a <a href="../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
-<p>You should be greeted with a sight similar to this:</p>
-<p><img src="../screenshots/ui-overview.png" alt="ui overview" /></p>
-<h2 id="menu-bar"><a class="header" href="#menu-bar">Menu bar</a></h2>
-<p>At the top is the menu bar. It contains most actions you can perform.
-Many actions also have shortcut keys, which are displayed on the right side of the menu buttons.</p>
-<h2 id="views"><a class="header" href="#views">Views</a></h2>
-<p>At the center are the views. Views are the main way you can view and interact with the file you opened.
-By default, you get 3 views:</p>
-<ol>
-<li>A Hex view, which displays data in a <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal format</a>.</li>
-<li>A Text view, which makes it easier to recognize text.</li>
-<li>A Block view, which can serve as a minimap, or display embedded graphical data.</li>
-</ol>
-<h2 id="interact-mode"><a class="header" href="#interact-mode">Interact mode</a></h2>
-<p>Hexerator has two interaction modes.</p>
-<h3 id="view-mode"><a class="header" href="#view-mode">View mode</a></h3>
-<p>Press <code>F1</code> to activate.</p>
-<p>This mode is used to navigate around the file in order to discover its contents.</p>
-<ul>
-<li>The arrow keys scroll the active view, letting you navigate around the file.</li>
-<li>You can hold down <code>left shift</code> to scroll faster.</li>
-<li><code>Page up</code> and <code>Page down</code> keys scroll a page's worth of content.</li>
-<li><code>Home</code> and <code>End</code> navigate to the beginning and end of the file respectively.</li>
-<li><code>ctrl</code> + <code>Left</code>/<code>Right</code> arrow keys to change the column count of your active <a href="./meta-overview.html#perspectives">perspective</a>.</li>
-<li><code>ctrl</code> + <code>Up</code>/<code>Down</code> arrow keys to change the starting offset of your active <a href="./meta-overview.html#regions">region</a>.</li>
-</ul>
-<h3 id="edit-mode"><a class="header" href="#edit-mode">Edit mode</a></h3>
-<p>Press <code>F2</code> to activate.</p>
-<p>This mode is used to edit the file by entering text through the keyboard.</p>
-<ul>
-<li>The arrow keys move the edit cursor.</li>
-</ul>
-<h2 id="inspect-panel"><a class="header" href="#inspect-panel">Inspect panel</a></h2>
-<p>The inspect panel provides multiple interpretations of the data the edit cursor or mouse is pointing at.
-It can be useful in figuring out what type of data we're dealing with.</p>
+                        <h1 id="perspectives-views-layouts"><a class="header" href="#perspectives-views-layouts">Perspectives, Views, Layouts</a></h1>
+<h2 id="adding-a-perspective"><a class="header" href="#adding-a-perspective">Adding a perspective</a></h2>
+<p>Make sure the Regions window is open (<code>Meta -&gt; Regions</code> or <code>F8</code>).</p>
+<p>Right click your <code>thumbnail</code> region, and click <code>Create Perspective</code> in the context menu.</p>
+<p><img src="../screenshots/tutorial/add-perspective.jpg" alt="Screenshot" /></p>
+<p>The Perspectives window will pop up.
+You can press enter to accept the name <code>thumbnail</code> for the newly created perspective.</p>
+<p>Assuming you haven't fiddled with the column count, it will be created with 80 columns.
+If that's not the case, you can drag or click the widget in the <code>Columns</code> row to adjust it.</p>
+<p><img src="../screenshots/tutorial/perspectives-window.jpg" alt="Screenshot" /></p>
+<h2 id="adding-a-layout"><a class="header" href="#adding-a-layout">Adding a layout</a></h2>
+<p>Let's create a dedicated space where we can put the thumbnail, and other new discoveries.</p>
+<p>Click <code>View -&gt; Layout -&gt; Add new</code>.</p>
+<p><img src="../screenshots/tutorial/layout-add-new.jpg" alt="Screenshot" /></p>
+<p>This will switch to a new (empty) layout, and open the layouts window.</p>
+<h2 id="adding-a-view"><a class="header" href="#adding-a-view">Adding a view</a></h2>
+<p>Click the <code>Add to new row</code> button.</p>
+<p><img src="../screenshots/tutorial/add-to-new-row.jpg" alt="Screenshot" /></p>
+<p>From the popup menu, click <code>New from perspective -&gt; thumbnail -&gt; Block</code>.</p>
+<p><img src="../screenshots/tutorial/new-from-perspective.jpg" alt="Screenshot" /></p>
+<p>This will add a new block view of the thumbnail to the perspective.</p>
+<p><strong>Tip:</strong> You can hold down the left Alt key to display some additional hover info about the visible views.</p>
+<p><img src="../screenshots/tutorial/thumbnail-block.jpg" alt="Screenshot" /></p>
+<h2 id="bonus-custom-color-palette"><a class="header" href="#bonus-custom-color-palette">(Bonus) Custom color palette</a></h2>
+<p>As a final touch, we can set an appropriate color palette.
+If you haven't already, you can download <a href="../assets/aitd.pal">aitd.pal</a>.</p>
+<p>On the right side of the top panel, there are some controls for the color palette of the current view.</p>
+<p>Select <code>custom</code> from the <code>Color</code> dropdown menu.</p>
+<p><img src="../screenshots/tutorial/custom-color.jpg" alt="Screenshot" /></p>
+<p>You can then press the <code>Load</code> button to load a custom palette from a file.
+In this case, the <code>aitd.pal</code> you presumably downloaded.</p>
+<p><img src="../screenshots/tutorial/load-color-pal.jpg" alt="Screenshot" /></p>
+<p><img src="../screenshots/tutorial/now-with-custom-palette.jpg" alt="Screenshot" /></p>
+<p>Very nice!</p>
+<p>Don't forget to save your progress! (<code>Meta -&gt; Save</code>)</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../tutorial/05-perspectives-views-layouts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/04-the-metafile.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../getting-started/meta-overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../getting-started/ui-overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -211,11 +209,11 @@ It can be useful in figuring out what type of data we're dealing with.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../tutorial/05-perspectives-views-layouts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/04-the-metafile.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../getting-started/meta-overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../getting-started/ui-overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

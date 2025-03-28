@@ -387,6 +387,8 @@ The magic offset in this case is 20.
 <p>We can confirm this by using a custom color palette (which you can download here: <a href="tutorial/../assets/aitd.pal">aitd.pal</a>)</p>
 <p>(TODO: Link to help on how to load custom color palettes)</p>
 <p><img src="tutorial/../screenshots/tutorial/with-custom-palette.jpg" alt="Screenshot" /></p>
+<p><strong>Tip:</strong> You can always keep track of the view offset and columns in the bottom panel.</p>
+<p><img src="tutorial/../screenshots/tutorial/offset-columns.jpg" alt="Screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="selections-and-regions"><a class="header" href="#selections-and-regions">Selections and Regions</a></h1>
 <p>Now that we have determined where the thumbnail for the save file is, we should note it down,
 and also inform Hexerator about it.</p>
@@ -686,6 +688,22 @@ to Hexerator and want to build it from source.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

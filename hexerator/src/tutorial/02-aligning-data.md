@@ -44,3 +44,7 @@ We can confirm this by using a custom color palette (which you can download here
 (TODO: Link to help on how to load custom color palettes)
 
 ![Screenshot](../screenshots/tutorial/with-custom-palette.jpg)
+
+**Tip:** You can always keep track of the view offset and columns in the bottom panel.
+
+![Screenshot](../screenshots/tutorial/offset-columns.jpg)

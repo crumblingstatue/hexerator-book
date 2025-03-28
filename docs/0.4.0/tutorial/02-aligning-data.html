@@ -187,6 +187,8 @@ The magic offset in this case is 20.
 <p>We can confirm this by using a custom color palette (which you can download here: <a href="../assets/aitd.pal">aitd.pal</a>)</p>
 <p>(TODO: Link to help on how to load custom color palettes)</p>
 <p><img src="../screenshots/tutorial/with-custom-palette.jpg" alt="Screenshot" /></p>
+<p><strong>Tip:</strong> You can always keep track of the view offset and columns in the bottom panel.</p>
+<p><img src="../screenshots/tutorial/offset-columns.jpg" alt="Screenshot" /></p>
 
                     </main>
 
@@ -217,6 +219,22 @@ The magic offset in this case is 20.
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

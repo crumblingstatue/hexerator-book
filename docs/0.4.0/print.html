@@ -480,6 +480,52 @@ In this case, the <code>aitd.pal</code> you presumably downloaded.</p>
 <p><img src="tutorial/../screenshots/tutorial/now-with-custom-palette.jpg" alt="Screenshot" /></p>
 <p>Very nice!</p>
 <p>Don't forget to save your progress! (<code>Meta -&gt; Save</code>)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="editing-and-saving"><a class="header" href="#editing-and-saving">Editing and Saving</a></h1>
+<h2 id="switching-layouts"><a class="header" href="#switching-layouts">Switching layouts</a></h2>
+<p>Let's switch back to the default layout to see what else we can figure out.</p>
+<p>Click <code>View -&gt; Layout</code>, then select the <code>Default layout</code> from the menu.</p>
+<p><img src="tutorial/../screenshots/tutorial/switch-layout.jpg" alt="Screenshot" /></p>
+<p>Let's examine more of the file!</p>
+<p>You can use the arrow keys to scroll the view.
+You can also use <code>Page up</code> and <code>Page down</code> to scroll entire pages.</p>
+<p>Huh? What's this right after the thumbnail?</p>
+<p><img src="tutorial/../screenshots/tutorial/save-name.jpg" alt="Screenshot" /></p>
+<p>It looks like the name of the save. That nul character right after is probably the nul terminator.</p>
+<p>Let's add it to our meta!
+I'll leave it as an exercise to add a region and perspective for it.
+Revisit <a href="tutorial/03-selections-and-regions.html">2.3</a> and <a href="tutorial/05-perspectives-views-layouts.html">2.5</a> if you need
+a refresher.</p>
+<p>Once you're done, switch back to our custom layout.</p>
+<p>Now let's add a text view of the save name to it.</p>
+<p><strong>Tip:</strong> You can right click the view area for a context menu.
+From there, you can click <code>Layout properties...</code> to open the layouts window with the current
+layout selected.</p>
+<p><img src="tutorial/../screenshots/tutorial/ctx-menu-layout-properties.jpg" alt="Screenshot" /></p>
+<p>Let's add it to the left of the thumbnail! Click the <code>Add to current row</code> button next to it.</p>
+<p><img src="tutorial/../screenshots/tutorial/layouts-add-to-row.jpg" alt="Screenshot" /></p>
+<p>This time, let's select a text view from the menu.</p>
+<p><img src="tutorial/../screenshots/tutorial/add-text-view.jpg" alt="Screenshot" /></p>
+<p>Don't forget to save your metafile! (<code>Meta -&gt; Save</code>)</p>
+<h2 id="editing-the-text"><a class="header" href="#editing-the-text">Editing the text</a></h2>
+<p>Click inside your new text view to make sure it's focused.
+The currently focused view has a yellow border around it, rather than gray.</p>
+<p><img src="tutorial/../screenshots/tutorial/focused-text-view.jpg" alt="Screenshot" /></p>
+<h3 id="switching-to-edit-mode"><a class="header" href="#switching-to-edit-mode">Switching to edit mode</a></h3>
+<p>Hexerator is a modal editor.
+The two modes are <code>View</code> and <code>Edit</code>.</p>
+<p>You can see the currently active mode at the left side of the bottom panel.
+Click <code>Edit</code> or press <code>F2</code> to switch to edit mode.</p>
+<p><img src="tutorial/../screenshots/tutorial/edit-mode.jpg" alt="Screenshot" /></p>
+<h3 id="editing-the-text-1"><a class="header" href="#editing-the-text-1">Editing the text</a></h3>
+<p>When edit mode is active, the cursor keys move the edit cursor rather than scrolling the view.
+You can press the <code>Home</code> key to jump the cursor to the beginning of the view.
+Now enter whatever text you want for the save name.
+You can press the <code>Delete</code> key to zero out bytes to properly nul terminate the string.</p>
+<h3 id="saving"><a class="header" href="#saving">Saving</a></h3>
+<p>Once you are done with your editing, you can click <code>File -&gt; Save</code> to save the file.</p>
+<p><img src="tutorial/../screenshots/tutorial/save-edited.jpg" alt="Screenshot" /></p>
+<p>Indeed, it looks like our edit has been successful.</p>
+<p><img src="tutorial/../screenshots/tutorial/testing-the-edit.jpg" alt="Screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ui-overview"><a class="header" href="#ui-overview">Ui Overview</a></h1>
 <p>Open a file either with a <a href="getting-started/../commandline.html">command line argument</a>, or by selecting <code>File-&gt;Open...</code> from the top menu.</p>
 <p>You should be greeted with a sight similar to this:</p>
@@ -754,22 +800,6 @@ to Hexerator and want to build it from source.</p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

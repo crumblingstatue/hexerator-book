@@ -14,6 +14,7 @@
     - [Selections and Regions](./tutorial/03-selections-and-regions.md)
     - [The metafile](./tutorial/04-the-metafile.md)
     - [Perspectives, Views, Layouts](./tutorial/05-perspectives-views-layouts.md)
+    - [Editing and Saving](./tutorial/06-editing-and-saving.md)
 - [Ui Overview](./getting-started/ui-overview.md)
 - [Meta overview](./getting-started/meta-overview.md)
 - [Basic operations](./getting-started/basic-operations.md)

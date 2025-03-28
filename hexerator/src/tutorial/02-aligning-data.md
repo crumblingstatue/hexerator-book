@@ -41,7 +41,7 @@ Alright, this looks very much like the thumbnail for the save file.
 
 We can confirm this by using a custom color palette (which you can download here: [aitd.pal](../assets/aitd.pal))
 
-(TODO: Link to help on how to load custom color palettes)
+How to set this custom palette will be explained in [chapter 5](05-perspectives-views-layouts.html#bonus-custom-color-palette).
 
 ![Screenshot](../screenshots/tutorial/with-custom-palette.jpg)
 

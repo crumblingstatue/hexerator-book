@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Selections and Regions - Hexerator</title>
+        <title>The metafile - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,41 +155,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="selections-and-regions"><a class="header" href="#selections-and-regions">Selections and Regions</a></h1>
-<p>Now that we have determined where the thumbnail for the save file is, we should note it down,
-and also inform Hexerator about it.</p>
-<h2 id="a-b-selection"><a class="header" href="#a-b-selection">A-B selection</a></h2>
-<p>First, let's select the thumbnail.
-The easiest way we can do this is with a-b selection.
-We'll use the hex view, since it has bigger elements that are easier to click.</p>
+                        <h1 id="the-metafile"><a class="header" href="#the-metafile">The Metafile</a></h1>
+<p>The information we have discovered about a file is called the <strong>Meta</strong>.
+It can be saved into a <strong>Metafile</strong>.
+Let's save our progress so far!</p>
+<p>Click <code>Meta -&gt; Save As...</code> and save your metafile into a location of your choosing.</p>
+<p><img src="../screenshots/tutorial/meta-save-as.jpg" alt="Screenshot" />
+<img src="../screenshots/tutorial/save-meta-dialog.jpg" alt="Screenshot" /></p>
+<p>Now any time you want to save the metafile, you can click <code>Meta -&gt; Save</code>.</p>
+<p>Additionally, you can click <code>Meta -&gt; Associate with current file</code> to associate the current file
+with the current metafile.
+This will make it so any time you open this file, it will use this metafile automatically.</p>
+<p><img src="../screenshots/tutorial/associate-meta.jpg" alt="Screenshot" /></p>
+<h2 id="meta-items"><a class="header" href="#meta-items">Meta items</a></h2>
+<p>Here is an overview of the 3 most important meta items:</p>
 <ul>
-<li>First, click the hex view, then press <code>ctrl+Home</code> (scroll to beginning) to make sure you're scrolled at the beginning of the view.</li>
-<li>Then click the first byte of the view, and press <code>shift+1</code> (a-select).</li>
+<li>
+<p>Region</p>
+<p>A region with a beginning and an end offset (inclusive).
+Our thumbnail starts at offset 20, and ends at offset 4019.</p>
+</li>
+<li>
+<p>Perspective</p>
+<p>Adds column count information to a region.
+For example, our thumbnail has 80 columns.</p>
+</li>
+<li>
+<p>View</p>
+<p>A configurable view into a perspective.
+The 3 basic view types are Hex, Text, and Block (minimap).</p>
+</li>
 </ul>
-<p><img src="../screenshots/tutorial/selection-1.jpg" alt="Screenshot" /></p>
-<ul>
-<li>Now you can press <code>End</code> (scroll to last column)</li>
-<li>The click the last byte of the thumbnail, and press <code>shift+2</code> (b-select).</li>
-</ul>
-<p><img src="../screenshots/tutorial/select-b.jpg" alt="Screenshot" /></p>
-<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
-<p>Now click <code>Edit -&gt; Selection -&gt; Add as region</code> in the top menu.</p>
-<p><img src="../screenshots/tutorial/add-as-region.jpg" alt="Screenshot" /></p>
-<p>This will open the Regions window, where you can name your newly created region.
-Let's name it <code>thumbnail</code>. You can press enter once finished</p>
-<p><img src="../screenshots/tutorial/regions-window.jpg" alt="Screenshot" /></p>
-<p>You can open the regions window any time by clicking <code>Meta -&gt; Regions</code> or pressing <code>F8</code>.</p>
-<p><img src="../screenshots/tutorial/meta-regions.jpg" alt="Screenshot" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../tutorial/02-aligning-data.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/03-selections-and-regions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../tutorial/04-the-metafile.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../getting-started/ui-overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -199,11 +205,11 @@ Let's name it <code>thumbnail</code>. You can press enter once finished</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../tutorial/02-aligning-data.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/03-selections-and-regions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../tutorial/04-the-metafile.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../getting-started/ui-overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

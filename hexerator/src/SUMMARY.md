@@ -12,6 +12,7 @@
     - [Opening the file](./tutorial/01-opening.md)
     - [Aligning data](./tutorial/02-aligning-data.md)
     - [Selections and Regions](./tutorial/03-selections-and-regions.md)
+    - [The metafile](./tutorial/04-the-metafile.md)
 - [Ui Overview](./getting-started/ui-overview.md)
 - [Meta overview](./getting-started/meta-overview.md)
 - [Basic operations](./getting-started/basic-operations.md)

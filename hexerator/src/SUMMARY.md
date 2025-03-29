@@ -19,6 +19,8 @@
 - [Ui Overview](./getting-started/ui-overview.md)
 - [Meta overview](./getting-started/meta-overview.md)
 - [Basic operations](./getting-started/basic-operations.md)
+- [Feature documentation](./feature-docs/00-index.md)
+    - [Memory mapped files](./feature-docs/mmap.md)
 
 # Appendix
 - [Command line flags](./commandline.md)

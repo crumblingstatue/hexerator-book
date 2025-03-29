@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Basic operations - Hexerator</title>
+        <title>Memory mapped files - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,37 +155,53 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="basic-operations"><a class="header" href="#basic-operations">Basic operations</a></h1>
-<h2 id="a-b-select"><a class="header" href="#a-b-select">A-B select</a></h2>
-<p>Click somewhere in a view to set the cursor to that location.
-You can then press <code>shift+1</code> in View mode to set the <code>A</code> point of a selection,
-and <code>shift+2</code> to set the <code>B</code> point of a selection.
-Once you have both an <code>A</code> and a <code>B</code> point, the selection is the region spanning
-<code>A</code> and <code>B</code>.</p>
-<p>Once you have a selection, you can do various things with it.</p>
+                        <h1 id="memory-mapped-files"><a class="header" href="#memory-mapped-files">Memory mapped files</a></h1>
+<p>Hexerator supports opening files as <a href="https://en.wikipedia.org/wiki/Memory-mapped_file">memory mapped</a>.</p>
+<p>If you have a large file that can't fit into memory, you can open it as memory mapped
+to lazily access it without loading the whole thing into memory upfront.</p>
+<p>You can also access things like block devices this way.</p>
+<div class="warning">
+<p><strong>Note:</strong> Hexerator needs exclusive access to memory mapped files.</p>
+<p>Sound behavior cannot be guaranteed if there are other programs accessing the same file.</p>
+<p>Hexerator itself currently does not use any kind of locking mechanism, so you have to ensure
+this manually.</p>
+<p>The <code>--unsafe-</code> prefix of the CLI flag reflects this.</p>
+</div>
+<h2 id="cli-flags"><a class="header" href="#cli-flags">CLI flags</a></h2>
+<pre><code>--unsafe-mmap &lt;mode&gt;
+    Try to open the source using mmap rather than load into a buffer
+
+    Possible values:
+    - ro:            Read-only memory map. Note: Some features may not work, as Hexerator was designed for a mutable data buffer
+    - cow:           Copy-on-write memory map. Changes are only visible locally
+    - dangerous-mut: Mutable memory map. *WARNING*: Any edits will immediately take effect. THEY CANNOT BE UNDONE
+
+--mmap-len &lt;len&gt;
+    Assume the memory mapped file is of this length (might be needed for looking at block devices, etc.)
+</code></pre>
 <ul>
-<li>Add a region by right clicking, and selecting <code>Add region as selection</code></li>
-<li>Fill using the fill options in the <code>Edit</code> menu</li>
-<li>Run an external command on the selection using <code>Edit-&gt;External command...</code></li>
-<li>Unselect with <code>Esc</code></li>
+<li>The recommended mode is <code>ro</code> for read-only access.</li>
+<li><code>cow</code> can be used to allow saving changes to a memory mapped file, but currently I'm not sure if the implementation is sound/bug-free.</li>
 </ul>
-<h2 id="select-all"><a class="header" href="#select-all">Select all</a></h2>
-<p>You can select everything in a view with <code>Edit-&gt;Select all in view</code> or <code>Ctrl+A</code>.</p>
-<h2 id="other-operations"><a class="header" href="#other-operations">Other operations</a></h2>
-<p>Documentation is a work-in-progress.
-Use the top menu to discover the kinds of things you can do in Hexerator!
-Also don't be afraid to right-click stuff.
-Right clicking things might reveal additional operations you can do.</p>
+<div class="warning">
+<p><strong>WARNING:</strong> <code>dangerous-mut</code> creates a direct mutable memory mapping.</p>
+<p><strong>Any changes you make will have immediate effect. They CANNOT be undone.</strong></p>
+<p>Use only as a last resort, and with extreme caution.</p>
+</div>
+<h2 id="file-dialog"><a class="header" href="#file-dialog">File dialog</a></h2>
+<p>You can also open a file as memory mapped from the file dialog UI.</p>
+<p>Check the <code>mmap</code> flag, and select the mode from the <code>mode</code> dropdown menu.</p>
+<p><img src="../screenshots/feature-docs/open-options-mmap.png" alt="Screenshot" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../getting-started/meta-overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../feature-docs/00-index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../feature-docs/00-index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../commandline.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -195,11 +211,11 @@ Right clicking things might reveal additional operations you can do.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../getting-started/meta-overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../feature-docs/00-index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../feature-docs/00-index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../commandline.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -24,6 +24,7 @@
     - [Selecting data](./basic-ops/selecting-data.md)
 - [Feature documentation](./feature-docs/00-index.md)
     - [Memory mapped files](./feature-docs/mmap.md)
+    - [Structs](./feature-docs/structs.md)
 
 # Appendix
 - [Command line flags](./commandline.md)

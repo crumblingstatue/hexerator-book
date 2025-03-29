@@ -693,6 +693,31 @@ this manually.</p>
 <p>You can also open a file as memory mapped from the file dialog UI.</p>
 <p>Check the <code>mmap</code> flag, and select the mode from the <code>mode</code> dropdown menu.</p>
 <p><img src="feature-docs/../screenshots/feature-docs/open-options-mmap.png" alt="Screenshot" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="structs"><a class="header" href="#structs">Structs</a></h1>
+<p>You can define structs with the <a href="https://www.rust-lang.org/">Rust language</a> struct syntax.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<p>Here is an example struct for an instrument in the <a href="https://www.aes.id.au/modformat.html">Protracker music format</a>.</p>
+<pre><code class="language-Rust">struct Sample {
+	name: [u8; 22],
+	len: u16,
+	finetune: u8,
+	volume: u8,
+	start: u16,
+	repeat_len: u16,
+}
+</code></pre>
+<h2 id="adding-structs"><a class="header" href="#adding-structs">Adding structs</a></h2>
+<p>You can toggle the structs window with <code>Meta -&gt; Structs</code> or the <code>F11</code> key.</p>
+<p>Write or paste your struct definition in the code editor, then click the <code>Save</code> button at the bottom.</p>
+<p><video autoplay loop> <source src="add-struct.mp4"> </video></p>
+<h2 id="using-as-a-ruler"><a class="header" href="#using-as-a-ruler">Using as a ruler</a></h2>
+<ol>
+<li>Click <code>View -&gt; Ruler -&gt; Add ruler for current view</code> to add a ruler if you haven't.</li>
+<li>Hover over the <code>struct</code> menu button, and click the struct you want to use for the ruler.</li>
+</ol>
+<p>The ruler will now use your struct definition.
+You can also hold down <code>Alt</code> to display the field names as an overlay.</p>
+<p><img src="feature-docs/../screenshots/feature-docs/ruler-struct.png" alt="Screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="command-line-api"><a class="header" href="#command-line-api">Command line API</a></h1>
 <p>Hexerator aims to support a wide variety of use cases, so it
 exposes a lot of different options.</p>

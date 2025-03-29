@@ -26,7 +26,7 @@ Now click `Edit -> Selection -> Add as region` in the top menu.
 ![Screenshot](../screenshots/tutorial/add-as-region.jpg)
 
 This will open the Regions window, where you can name your newly created region.
-Let's name it `thumbnail`. You can press enter once finished
+Let's name it `thumbnail`. You can press enter once finished.
 
 ![Screenshot](../screenshots/tutorial/regions-window.jpg)
 

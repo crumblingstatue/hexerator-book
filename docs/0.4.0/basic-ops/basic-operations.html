@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Meta overview - Hexerator</title>
+        <title>Basic operations - Hexerator</title>
 
 
         <!-- Custom HTML head -->
@@ -155,82 +155,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="meta-overview"><a class="header" href="#meta-overview">Meta overview</a></h1>
-<p>In order to understand how to use Hexerator, we'll establish some basic concepts.</p>
-<h2 id="what-is-the-meta"><a class="header" href="#what-is-the-meta">What is the Meta?</a></h2>
-<p>When you open a file with Hexerator, you're opening a raw binary file.
-The raw binary file itself doesn't dictate how a hex editor should display it, or how to interpret
-the raw binary data contained within.
-Instead, it's up to the user to figure out all that stuff.
-The <strong>Meta</strong> contains all the information on how to meaningfully interpret and display the data.
-It can also contain various notes and discoveries made by the user.</p>
-<h2 id="meta-components"><a class="header" href="#meta-components">Meta components</a></h2>
-<ul>
-<li><a href="#regions">Regions</a></li>
-<li><a href="#perspectives">Perspectives</a></li>
-<li><a href="#views">Views</a></li>
-<li><a href="#layouts">Layouts</a></li>
-<li><a href="#bookmarks">Bookmarks</a></li>
-</ul>
-<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
-<p>Regions are the most basic metadata. They are used to mark regions of the file that are meaningfully different.
-For example an executable might contain a header, executable code, and data.
-These could be marked as 3 different regions in Hexerator.</p>
-<p>The default region is the entire file.</p>
-<p>You can select <code>Meta-&gt;Regions</code> from the top menu, or press <code>F8</code> to bring up a list of regions, and create
-new ones.</p>
-<p>In order to create a new region, you first need to <a href="./basic-operations.html#a-b-select">make a selection</a>.</p>
-<h2 id="perspectives"><a class="header" href="#perspectives">Perspectives</a></h2>
-<p>Perspectives tell Hexerator how to align the data, by setting the number of columns used to display them.
-Each perspective has an associated <a href="#regions">region</a>.</p>
-<p>You can press <code>ctrl + Left</code> and <code>ctrl + Right</code> arrow keys in <code>View</code> mode to adjust the column count
-for the current perspective.</p>
-<p>Additionally, perspectives have a special mode to flip the row order, to display rows upside down.
-This is useful because sometimes things like images are stored upside down in binary files.
-Weird, I know.</p>
-<p>You can select <code>Perspective-&gt;Perspectives</code> from the top menu, or press <code>F7</code> to bring up a list of
-perspectives, and create new ones.</p>
-<h2 id="views"><a class="header" href="#views">Views</a></h2>
-<p>Views are the windows through which data is viewed and interacted with.
-Each view has an associated <a href="#perspectives">perspective</a>.
-Views that share the same perspective scroll together. So if the hex view of a perspective is scrolled,
-the text and block views scroll along with it.</p>
-<p>Currently there are 4 basic types of views</p>
-<ul>
-<li>Hex</li>
-<li>Decimal</li>
-<li>Text</li>
-<li>Block</li>
-</ul>
-<p>You can right click a view and select <code>View properties...</code> to look at and change the properties
-of a view.</p>
-<p>You can also select <code>View-&gt;Views</code> from the top menu, or press <code>F6</code> to bring up a list of views,
-and create new views.</p>
-<h2 id="layouts"><a class="header" href="#layouts">Layouts</a></h2>
-<p>Layouts are groups of views that are displayed together.
-You can create multiple layouts that show different places in the file in different ways.</p>
-<p>A layout consists of one or more rows, and each row can contain one or more view.
-Hexerator will try to lay out the views in a sensible manner, based on the row and column they belong to.</p>
-<p>The default layout is a Hex view, a Text view, and a Block view side by side.</p>
-<p>You can select <code>View-&gt;Layouts</code> from the top menu, or press <code>F5</code> to bring up a list of layouts, and
-edit the current layout, or add new ones.</p>
-<h2 id="bookmarks"><a class="header" href="#bookmarks">Bookmarks</a></h2>
-<p>Bookmarks are places of interest in the data at various offsets.
-They can also additionally be assigned a data type, which allows them
-to show a handle to the data at their offset, which shows the value and allows it to be edited.</p>
-<p>You can select <code>Meta-&gt;Bookmarks</code> from the top menu, or press <code>F9</code> to show a list of bookmarks, and
-add new ones.</p>
-<p>You can also right click a location in a view, and select <code>Add bookmark</code>.</p>
+                        <h1 id="basic-operations"><a class="header" href="#basic-operations">Basic operations</a></h1>
+<p>This section details some basic operations you can do with Hexerator.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../getting-started/ui-overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../getting-started/meta-overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../basic-ops/basic-operations.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../basic-ops/selecting-data.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -240,11 +176,11 @@ add new ones.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../getting-started/ui-overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../getting-started/meta-overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../basic-ops/basic-operations.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../basic-ops/selecting-data.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -635,26 +635,25 @@ to show a handle to the data at their offset, which shows the value and allows i
 add new ones.</p>
 <p>You can also right click a location in a view, and select <code>Add bookmark</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="basic-operations"><a class="header" href="#basic-operations">Basic operations</a></h1>
+<p>This section details some basic operations you can do with Hexerator.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="selecting-data"><a class="header" href="#selecting-data">Selecting data</a></h1>
 <h2 id="a-b-select"><a class="header" href="#a-b-select">A-B select</a></h2>
 <p>Click somewhere in a view to set the cursor to that location.
 You can then press <code>shift+1</code> in View mode to set the <code>A</code> point of a selection,
 and <code>shift+2</code> to set the <code>B</code> point of a selection.
 Once you have both an <code>A</code> and a <code>B</code> point, the selection is the region spanning
 <code>A</code> and <code>B</code>.</p>
-<p>Once you have a selection, you can do various things with it.</p>
-<ul>
-<li>Add a region by right clicking, and selecting <code>Add region as selection</code></li>
-<li>Fill using the fill options in the <code>Edit</code> menu</li>
-<li>Run an external command on the selection using <code>Edit-&gt;External command...</code></li>
-<li>Unselect with <code>Esc</code></li>
-</ul>
 <h2 id="select-all"><a class="header" href="#select-all">Select all</a></h2>
 <p>You can select everything in a view with <code>Edit-&gt;Select all in view</code> or <code>Ctrl+A</code>.</p>
-<h2 id="other-operations"><a class="header" href="#other-operations">Other operations</a></h2>
-<p>Documentation is a work-in-progress.
-Use the top menu to discover the kinds of things you can do in Hexerator!
-Also don't be afraid to right-click stuff.
-Right clicking things might reveal additional operations you can do.</p>
+<h2 id="mouse-drag-selection"><a class="header" href="#mouse-drag-selection">Mouse drag selection</a></h2>
+<p>Click a byte and drag the mouse, releasing it when the desired region is selected.</p>
+<p><video autoplay loop> <source src="mouse-select.mp4"> </video></p>
+<h2 id="mouse-block-multi-selection"><a class="header" href="#mouse-block-multi-selection">Mouse block multi-selection</a></h2>
+<p>Hold down left <code>Alt</code> and draw a rectangle with the mouse to select a block.</p>
+<p><video autoplay loop> <source src="block-select.mp4"> </video></p>
+<h2 id="unselecting"><a class="header" href="#unselecting">Unselecting</a></h2>
+<p>You can press the <code>clear</code> button in the top bar, or press <code>Esc</code>.</p>
+<p><img src="basic-ops/./clear-button.png" alt="Screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="feature-documentation"><a class="header" href="#feature-documentation">Feature documentation</a></h1>
 <p>Here are documentation for individual features.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="memory-mapped-files"><a class="header" href="#memory-mapped-files">Memory mapped files</a></h1>

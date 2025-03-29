@@ -16,9 +16,12 @@
     - [Perspectives, Views, Layouts](./tutorial/05-perspectives-views-layouts.md)
     - [Editing and Saving](./tutorial/06-editing-and-saving.md)
     - [Wrapping up](./tutorial/wrapping-up.md)
+
+# Documentation
 - [Ui Overview](./getting-started/ui-overview.md)
 - [Meta overview](./getting-started/meta-overview.md)
-- [Basic operations](./getting-started/basic-operations.md)
+- [Basic operations](./basic-ops/basic-operations.md)
+    - [Selecting data](./basic-ops/selecting-data.md)
 - [Feature documentation](./feature-docs/00-index.md)
     - [Memory mapped files](./feature-docs/mmap.md)
 
